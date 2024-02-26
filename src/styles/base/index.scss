@@ -1,0 +1,38 @@
+@use './global';
+@use './utils';
+
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  font-family: Satoshi-Light;
+  font-size: global.$fs;
+  color: global.$secondary;
+  background: global.$main;
+  padding: 2rem;
+  height: 100svh;
+  width: 100vw;
+}
+
+h1{
+  align-self: flex-end;
+  padding-top: global.$display-padding;
+  font-size: global.$fs-xl;
+}
+
+.layout,
+.layout main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.layout main{
+  position: relative;
+}
+
+
+
+

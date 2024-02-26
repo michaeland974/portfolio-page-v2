@@ -1,0 +1,33 @@
+@font-face {  font-family: Satoshi-Bold;
+  src: url('./../fonts/Satoshi-Bold.otf'); }
+@font-face {  font-family: Satoshi-Light;
+  src: url('./../fonts/Satoshi-Light.otf'); }
+@font-face {  font-family: Satoshi-LightItalic;
+  src: url('./../fonts/Satoshi-LightItalic.otf'); 
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {  font-family: Satoshi-Regular;
+  src: url('./../fonts/Satoshi-Regular.otf'); }
+@font-face {  font-family: Emoji;
+  src: url('./../fonts/NotoEmoji-Regular.ttf');
+}
+
+$main: var(--main);
+$secondary: var(--secondary);
+$highlight: var(--highlight);
+$highlight-2: var(--highlight-2);
+$accent-1: var(--accent-1);
+$accent-2: var(--accent-2);
+$grey: var(--grey);
+$light-grey: var(--light-grey);
+
+$background-gradient: linear-gradient(45deg, var(--not-white) 65%, white);
+$moz-background-gradient: -moz-linear-gradient(45deg, var(--not-white) 65%, white);
+
+$fs: clamp(1rem, 2.5vw, 1.25rem);
+$fs-xl: clamp(2rem, 2.5vw, 5rem);
+
+$display-padding: 1rem;
+
+$onload-animation: 0.9s cubic-bezier(0, 1, 1, 1) 0.65s;
