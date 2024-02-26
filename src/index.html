@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" 
+        content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#efe6dd" />
+  <link href="bundled-css/reset.css" rel="stylesheet">
+  <link href="bundled-css/styles.css" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="favicon-32x32.png"/>
+  <script type="module" src="js/app.min.js" defer></script>
+  <title>Portfolio</title>
+</head>
+  <body>
+    <div class="layout">
+      <nav>
+        <ul class="wrapper">
+          <li tabindex="0" role="button"
+              aria-expanded="false"
+              aria-controls="about-me">About me</li>
+          <li tabindex="0" role="button" 
+              aria-expanded="false"
+              aria-controls="projects">Projects</li>
+          <li tabindex="0" role="button" 
+              aria-expanded="false"
+              aria-controls="get-in-touch">Get in touch</li>
+        </ul>
+      </nav>
+             
+      <main>
+        
+        <div class="content">
+          <section class="view" id="about-me" aria-selected="false">
+            <p>
+              I am currently
+            </p>
+          </section>
+
+          <section class="view" id="projects" aria-selected="false">
+            
+          </section>
+
+          <section class="view" id="get-in-touch" aria-selected="false">
+          
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <h1>Web Developer</h1>
+  </body>
+</html>

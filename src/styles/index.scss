@@ -1,0 +1,107 @@
+@font-face {  font-family: Satoshi-Bold;
+  src: url('./../fonts/Satoshi-Bold.otf'); }
+@font-face {  font-family: Satoshi-Light;
+  src: url('./../fonts/Satoshi-Light.otf'); }
+@font-face {  font-family: Satoshi-LightItalic;
+  src: url('./../fonts/Satoshi-LightItalic.otf'); 
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {  font-family: Satoshi-Regular;
+  src: url('./../fonts/Satoshi-Regular.otf'); }
+@font-face {  font-family: Emoji;
+  src: url('./../fonts/NotoEmoji-Regular.ttf');
+}
+
+:root{
+  --almost-black: #212121;
+  --not-white: #efe6dd;
+  --grey: #21212192;
+  --blue: #76A4B3;
+  --green: #61875B;
+  --red: #A34546;
+  --light-grey: #2121214e;
+  --background-gradient: linear-gradient(45deg, var(--not-white) 65%, white);
+  --moz-background-gradient: -moz-linear-gradient(45deg, var(--not-white) 65%, white);
+ 
+  --symbol-dimension: 18px;
+  --symbol-skew: -20deg;
+  --symbol-rotate: 90deg;
+  --symbol-translate: 17px;
+  --symbol-translate-negative: calc(var(--symbol-translate) * -1);
+  --border-length: 23vw;
+  --border-length-negative: calc(var(--border-length) * -1);
+  --border-translate-media: 1vw;
+  --onload-animation: 0.9s cubic-bezier(0, 1, 1, 1) 0.65s;
+
+  --display-padding: 1rem;
+  --fs: clamp(1rem, 2.5vw, 1.25rem);
+  --fs-xl: clamp(2rem, 2.5vw, 5rem);
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  font-family: Satoshi-Light;
+  font-size: var(--fs);
+  color: var(--almost-black);
+  background: var(--background-gradient,
+                  --moz-background-gradient);
+  padding: 2rem;
+  height: 100svh;
+  width: 100vw;
+}
+
+h1{
+  align-self: flex-end;
+  padding-top: var(--display-padding);
+  font-size: var(--fs-xl);
+}
+
+.layout,
+.layout main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.layout main{
+  position: relative;
+}
+
+#symbol{
+  color: var(--almost-black);
+  font-size: 20px;
+  letter-spacing: -2px;
+  align-self: center;
+}
+
+#symbol > * {
+  position: absolute;
+  top: 50%;
+  left: 50%; 
+}
+
+#symbol #colon { transform: translate(-50%, -50%);}
+#symbol [position="left"], 
+#symbol [position="right"]{
+  height: var(--symbol-dimension);
+  width: var(--symbol-dimension);
+  border-left: 1px solid var(--almost-black);
+}
+
+#symbol [position="left"]{
+  transform: translate(calc(var(--symbol-translate)/2), -50%) 
+             skew(var(--symbol-skew)); 
+}
+
+#symbol [position="right"]{
+  transform: translate(var(--symbol-translate), -50%) 
+             skew(var(--symbol-skew)); 
+}
+
+
+

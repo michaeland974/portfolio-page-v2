@@ -1,0 +1,18 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+     "strict": true,
+     "module": "ESNext",
+     "target": "es6",
+     "esModuleInterop": true,
+     "sourceMap": true,
+     "noImplicitAny": true,
+     "rootDir": "src",
+     "outDir": "dist/js",
+     "noEmitOnError": true,
+  },
+  "include": ["./src/"],
+  "exclude": [
+    "node_modules"
+]
+}
