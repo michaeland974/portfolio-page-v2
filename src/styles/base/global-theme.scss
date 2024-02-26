@@ -1,0 +1,15 @@
+body{
+  --main: #EEF5DB;
+  --secondary: #1e1c1c;
+  --highlight: #FE5F55;
+  --highlight-2: #F6AA98;
+  --accent-1: #B8D8D8;
+  --accent-2: #7A9E9F;
+  --grey: #21212192;
+  --light-grey: #2121214e;
+}
+
+body:has([data-theme="dark"]:checked){
+  --main: #1e1c1c;
+  --secondary: #EEF5DB;
+}
