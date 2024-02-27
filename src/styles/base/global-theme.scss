@@ -1,15 +1,25 @@
+@use './global';
+
 body{
-  --main: #EEF5DB;
-  --secondary: #1e1c1c;
-  --highlight: #FE5F55;
-  --highlight-2: #F6AA98;
-  --accent-1: #B8D8D8;
-  --accent-2: #7A9E9F;
+  --brand-color: #d25168;
+  --main: #ffe0b5;
+  --secondary: #290a10;
+  --accent-1: #a4af69;
+  --accent-2: #EDE580;
+  --highlight-1: #903D41;
+  --highlight-2: #C9CA75;
+
   --grey: #21212192;
   --light-grey: #2121214e;
 }
 
 body:has([data-theme="dark"]:checked){
-  --main: #1e1c1c;
-  --secondary: #EEF5DB;
+  --main: hsl(349, 59%, 10%);
+  --secondary: #ffe0b5;
+
+  --accent-1: #EDE580;
+  --accent-2: #a4af69;
+
+  --highlight-1: #C9CA75;
+  --highlight-2: #903D41;
 }
