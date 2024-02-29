@@ -1,0 +1,55 @@
+@use './base/global';
+@use './base/media';
+
+@mixin flex-spread{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+$gap: 1em;
+
+header{
+  @include flex-spread;
+  font-family: Satoshi-Regular;
+  height: global.$header-height;
+  width: 100%;
+  padding: global.$display-padding;
+  position: fixed;
+
+  h1{
+    display: none;
+    font-family: Satoshi-Bold;
+  }
+
+  .wrapper{
+    @include flex-spread;
+    width: 100%;
+
+    nav{
+      ul{
+        display: flex;
+        gap: $gap;
+      }
+    }
+  }
+
+  @media screen and (min-width: media.$tablet-width) {
+      $_gap: calc($gap * 2);
+
+      h1{
+        display: flex;
+      }
+
+      .wrapper{
+        width: auto;
+        gap: $_gap;
+
+        nav{
+          ul{
+            gap: $_gap;
+          }
+        }
+      }
+    }
+}

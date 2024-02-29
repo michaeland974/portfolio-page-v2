@@ -21,39 +21,27 @@ body{
   flex-direction: column;
   justify-content: space-between;
 
-  font-family: Satoshi-Light;
   font-size: global.$fs;
   color: global.$secondary;
   background: global.$main;
-  padding: 2rem;
   height: 100svh;
-  width: 100vw;
+
   transition: global.$transition-timing all;
 
   & > *:not(#onload-wrapper){
-    opacity: 0;
-    visibility: hidden;
-    animation: Fade-In-OnLoad 1s ease-out forwards;
+    // opacity: 0;
+    // visibility: hidden;
+    // animation: Fade-In-OnLoad 1s ease-out forwards;
     animation-delay: map.get(global.$delays, "onload-visibility");
   }
-}
 
-h1{
-  align-self: flex-end;
-  padding-top: global.$display-padding;
-  font-size: global.$fs-xl;
-}
-
-.layout,
-.layout main{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 1;
-}
-
-.layout main{
-  position: relative;
+  main{
+    margin-top: global.$header-height;
+    
+    & > section{
+      height: global.$child-height;
+    }
+  }
 }
 
 

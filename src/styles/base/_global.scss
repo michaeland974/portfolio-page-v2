@@ -9,11 +9,19 @@
   font-style: normal;
   font-weight: 400;
 }
-@font-face {  font-family: Satoshi-Regular;
-  src: url('./../fonts/Satoshi-Regular.otf'); }
-@font-face {  font-family: Emoji;
-  src: url('./../fonts/NotoEmoji-Regular.ttf');
+@font-face {  
+  font-family: Satoshi-Regular;
+  src: url('./../fonts/Satoshi-Regular.otf'); 
 }
+@font-face {  
+  font-family: Serif-Regular;
+  src: url('./../fonts/SourceSerif4-Regular.ttf'); 
+}
+@font-face {  
+  font-family: Serif-Light;
+  src: url('./../fonts/SourceSerif4-Light.ttf'); 
+}
+
 
 $brand-color: var(--brand-color);
 $main: var(--main);
@@ -31,6 +39,8 @@ $moz-background-gradient: -moz-linear-gradient(45deg, var(--not-white) 65%, whit
 $fs: clamp(1rem, 2.5vw, 1.25rem);
 $fs-xl: clamp(2rem, 2.5vw, 5rem);
 
+$header-height: 65px;
+$child-height: 100svh;
 $display-padding: 1rem;
 
 $icon-dimension: 40px;
