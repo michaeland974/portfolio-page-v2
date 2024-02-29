@@ -1,0 +1,112 @@
+@use './base/global';
+@use './base/media';
+
+@mixin flex-row{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+@mixin flex-col{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+}
+
+#projects{
+  @include flex-col;
+  height: 85svh;  
+  position: relative;
+
+  h2{
+    top: 0;
+    position: absolute;
+    font-size: global.$fs-xl;
+    font-family: Satoshi-Bold;
+  }
+
+  #slide-container{
+    --card-width: 10px;
+    --card-gap: 1em;
+    --transition-timing: 0.7s;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: var(--card-gap);
+    margin-top: 1rem;
+    position: relative;
+    height: 100%;
+    width: 50%;
+    
+    --position: 0;
+    --shift: calc((var(--card-width) + var(--card-gap)) * var(--position));
+    left: var(--shift);
+    transition: all var(--transition-timing) ease;
+
+    @media screen and (min-width: media.$desktop-width) {
+      margin-top: 2rem;
+    }
+
+    .card{
+      flex-shrink: 0;
+      height: 75%;
+      width: var(--card-width);
+      background-color: global.$secondary;
+      border-radius: 20px;
+      transition: all var(--transition-timing) ease;
+      
+      &[data-active]{
+        opacity: 1;
+        // transform: scale(1.7);
+        // height: 100%;
+        width: 65vw;  
+      }
+
+      &:not([data-active]){
+        opacity: 0.4;
+        // transform: scaleX(0.5);
+        // width: calc(var(--card-width) / 2);
+      }
+    }
+    &[data-position="-2"]{ --position: -2; }
+    &[data-position="-1"]{ --position: -1; }
+    &[data-position="0"]{ --position: 0; }
+    &[data-position="1"]{ --position: 1; }
+    &[data-position="2"]{ --position: 2; }
+  }
+
+  .controls{
+    @include flex-row;
+    position: absolute;
+    top: 90%;
+    gap: 2rem;
+
+    button{
+      width: 60px;
+      height: 60px;
+      background-color: global.$accent-1;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .icon{
+        height: 40%;  
+        width: 40%;
+        background: url("../svg/arrow.svg") no-repeat center;
+      }
+
+      &#next{
+        transform: rotate(45deg);
+      }
+
+      &#prev{
+        transform: rotate(-135deg);
+      }
+
+    }
+  }
+}

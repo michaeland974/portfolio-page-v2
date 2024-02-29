@@ -21,6 +21,10 @@
   font-family: Serif-Light;
   src: url('./../fonts/SourceSerif4-Light.ttf'); 
 }
+@font-face {  
+  font-family: Serif-Bold;
+  src: url('./../fonts/SourceSerif4-Bold.ttf'); 
+}
 
 $brand-color: var(--brand-color);
 $main: var(--main);
@@ -41,7 +45,7 @@ $fs-text: clamp(1.6rem, 2.5vw, 1.75rem);
 $fs-xl: clamp(2rem, 4vw, 5rem);
 
 $header-height: 65px;
-$child-height: 100svh;
+$child-height: 75svh;
 $display-padding: 1rem;
 
 $icon-dimension: 40px;

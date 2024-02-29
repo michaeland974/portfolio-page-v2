@@ -38,11 +38,18 @@ body{
 
   main{
     margin-top: global.$header-height;
-    padding: global.$display-padding;
-    
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+
     & > section{
-      height: global.$child-height;
+
     }
+    
+    // & > section{
+    //   height: global.$child-height;
+    // }
   }
 }
 

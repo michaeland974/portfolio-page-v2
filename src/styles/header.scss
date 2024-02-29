@@ -14,7 +14,7 @@ header{
   font-family: Satoshi-Regular;
   height: global.$header-height;
   width: 100%;
-  padding: global.$display-padding;
+  padding: 2rem;
   position: fixed;
   background-color: global.$main;
   transition: background-color global.$transition-timing;
