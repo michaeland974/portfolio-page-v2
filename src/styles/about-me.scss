@@ -1,3 +1,91 @@
-main{
-  font-family: Serif-Light;
+@use './base/global';
+@use './base/utils';
+@use './base/media';
+
+@keyframes Floating{
+  0% {
+    transform: translate(-40%, -60%);
+  }
+ 
+  100% {
+    transform: translate(0px, -75px);
+  }
+}
+
+@mixin animation($duration){
+  animation: Floating $duration ease-in-out infinite alternate;
+}
+
+@mixin flex-col{
+  display: flex;
+  flex-direction: column;    
+  align-items: flex-start;
+}
+
+#about-me{
+  @include utils.grid-children-stack;
+  font-family: Satoshi-Bold;
+  height: 75svh;
+
+  .content{
+    font-size: global.$fs-text;
+    @include flex-col;
+    gap: global.$display-padding;
+
+    @media screen and (min-width: media.$tablet-width) {
+      width: 50%;
+    }
+
+    .group-1{
+      @include flex-col;
+
+      h2{
+        font-size: global.$fs-xl;
+        margin-bottom: -5px;
+      }
+    }
+    
+    p{
+      font-family: Satoshi-Regular;
+      line-height: 35px;
+
+      span{
+        color: global.$highlight-1;
+        font-family: Serif-Bold;
+      }
+    }
+  }
+    
+  .decoration-block{
+    display: none;
+    z-index: -1;
+    height: 100%;
+    width: 50%;
+    position: relative;
+    transform: translateX(125%);
+
+    .wrapper{
+      $dimension: 45px;
+      height: $dimension;
+      aspect-ratio: 1/1;  
+      background-color: rgba(128, 128, 128, 0.212); 
+      border-radius: 50%;
+      position: absolute;
+            
+      .blob{
+        @extend .wrapper;
+        background-color: global.$highlight-1;
+      }
+
+      &:first-child {
+        top: 50%;
+        left: 50%;
+      }
+    }
+
+    @media screen and (min-width: media.$tablet-width) {
+      display: block;
+    }
+  
+  }
 }

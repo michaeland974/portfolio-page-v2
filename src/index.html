@@ -12,59 +12,77 @@
   <title>Portfolio</title>
 </head>
   <body>
-
-    <div id="onload-wrapper">
+    <!-- <div id="onload-wrapper">
       <svg viewBox="0 0 35.6 35.6">
         <circle data-type="background" cx="17.8" cy="17.8" r="17.8"></circle>
         <circle data-type="stroke" cx="17.8" cy="17.8" r="15.5"></circle>
       </svg>  
       <div id="icon-glasses"></div>
-    </div>
+    </div> -->
 
-    <label for="dark-mode-check" id="checkbox-wrapper">
-      <input type="checkbox" data-theme="dark" id="dark-mode-check">
-      <svg viewBox="0 0 35.6 35.6">
-        <circle data-type="background" cx="17.8" cy="17.8" r="17.8"></circle>
-        <circle data-type="stroke" cx="17.8" cy="17.8" r="15.5"></circle>
-      </svg>  
-      <div id="icon-overlay"></div>
-    </label>
+    <header>
+      <h1>Web Developer</h1>
 
-    <div class="layout">
-      <nav>
-        <ul class="wrapper">
-          <li tabindex="0" role="button"
-              aria-expanded="false"
-              aria-controls="about-me">About me</li>
-          <li tabindex="0" role="button" 
-              aria-expanded="false"
-              aria-controls="projects">Projects</li>
-          <li tabindex="0" role="button" 
-              aria-expanded="false"
-              aria-controls="get-in-touch">Get in touch</li>
-        </ul>
-      </nav>
-             
-      <main>
-        
+      <div class="wrapper">
+        <nav>
+          <ul>
+            <li tabindex="0" role="button"
+                aria-expanded="false"
+                aria-controls="about-me">About me</li>
+            <li tabindex="0" role="button" 
+                aria-expanded="false"
+                aria-controls="projects">Projects</li>
+            <li tabindex="0" role="button" 
+                aria-expanded="false"
+                aria-controls="get-in-touch">Get in touch</li>
+          </ul>
+        </nav>
+
+        <label for="dark-mode-check" id="checkbox-wrapper">
+          <input type="checkbox" data-theme="dark" id="dark-mode-check">
+          <svg viewBox="0 0 35.6 35.6">
+            <circle data-type="background" cx="17.8" cy="17.8" r="17.8"></circle>
+            <circle data-type="stroke" cx="17.8" cy="17.8" r="15.5"></circle>
+          </svg>  
+          <div id="icon-overlay"></div>
+        </label>
+      </div>
+
+    </header>
+
+    <main>
+      <section class="view" id="about-me" aria-selected="false">
         <div class="content">
-          <section class="view" id="about-me" aria-selected="false">
-            <p>
-              I am currently
-            </p>
-          </section>
-
-          <section class="view" id="projects" aria-selected="false">
-            
-          </section>
-
-          <section class="view" id="get-in-touch" aria-selected="false">
-          
-          </section>
+          <div class="group-1">
+            <h2>I'm Michael</h2>
+          </div>
+          <p>
+            A self-taught developer and <span>CSS Enthusiast</span>, specialized in front end coding and Wordpress.
+            Currently, I'm working as a restaurant cook, and looking to make a career transition onto a professional web or design team.
+          </p>
         </div>
-      </main>
-    </div>
 
-    <h1>Web Developer</h1>
+        <div class="decoration-block" aria-hidden="true">
+          <div class="wrapper">
+            <div class="blob"></div>
+          </div>
+          <div class="wrapper">
+            <div class="blob" id="test"></div>
+          </div>
+          <div class="wrapper">
+            <div class="blob" id="test"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="view" id="projects" aria-selected="false">
+        Hello World!
+      </section>
+
+      <section class="view" id="get-in-touch" aria-selected="false">
+        Hello World!
+      </section>
+    </main>
+
   </body>
 </html>

@@ -25,8 +25,9 @@ body{
   color: global.$secondary;
   background: global.$main;
   height: 100svh;
+  overflow-x: hidden;
 
-  transition: global.$transition-timing all;
+  transition: background-color global.$transition-timing;
 
   & > *:not(#onload-wrapper){
     // opacity: 0;
@@ -37,6 +38,7 @@ body{
 
   main{
     margin-top: global.$header-height;
+    padding: global.$display-padding;
     
     & > section{
       height: global.$child-height;

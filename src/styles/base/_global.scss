@@ -22,11 +22,11 @@
   src: url('./../fonts/SourceSerif4-Light.ttf'); 
 }
 
-
 $brand-color: var(--brand-color);
 $main: var(--main);
 $secondary: var(--secondary);
-$highlight: var(--highlight);
+$highlight-1: var(--highlight-1);
+$highlight-1-faded: var(--highlight-1-faded);
 $highlight-2: var(--highlight-2);
 $accent-1: var(--accent-1);
 $accent-2: var(--accent-2);
@@ -37,7 +37,8 @@ $background-gradient: linear-gradient(45deg, var(--not-white) 65%, white);
 $moz-background-gradient: -moz-linear-gradient(45deg, var(--not-white) 65%, white);
 
 $fs: clamp(1rem, 2.5vw, 1.25rem);
-$fs-xl: clamp(2rem, 2.5vw, 5rem);
+$fs-text: clamp(1.6rem, 2.5vw, 1.75rem);
+$fs-xl: clamp(2rem, 4vw, 5rem);
 
 $header-height: 65px;
 $child-height: 100svh;
