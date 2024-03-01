@@ -82,7 +82,7 @@
       font-family: Serif-Light;
       color: global.$main;
       border-radius: 20px;
-      transition: all var(--transition-timing) ease;
+      transition: width 0.8s ease;
 
       .opacity-wrapper{
         opacity: 0;
@@ -94,8 +94,7 @@
         position: relative;
 
         //Fix for link group positioning on transition
-        transition: opacity 0.3s cubic-bezier(.27,1.03,.85,.8);
-
+        transition: opacity 0.1s cubic-bezier(.27,1.03,.85,.8);
 
         .content{
           h3{

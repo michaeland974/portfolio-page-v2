@@ -2,6 +2,16 @@
 @use './utils';
 @use "sass:map";
 
+
+@keyframes Scroll-Onload{
+  0%{
+    overflow-y: hidden;
+  }
+  100%{
+    overflow-y: scroll;
+  }
+}
+
 @keyframes Fade-In-OnLoad{
   0%{
     filter: blur(10px);
@@ -27,20 +37,23 @@ body{
   height: 100svh;
   width: 100vw;
   overflow-x: hidden;
+  overflow-y: hidden;
 
   transition: background-color global.$transition-timing;
 
+  animation: Scroll-Onload 1s ease-out forwards;
+  animation-delay: map.get(global.$delays, "onload-visibility");
+
   & > *:not(#onload-wrapper){
-    // opacity: 0;
-    // visibility: hidden;
-    // animation: Fade-In-OnLoad 1s ease-out forwards;
+    opacity: 0;
+    visibility: hidden;
+    animation: Fade-In-OnLoad 1s ease-out forwards;
     animation-delay: map.get(global.$delays, "onload-visibility");
   }
 
   main{
     margin-top: global.$header-height;
     width: 100%;
-    // padding: 2rem;
     display: flex;
     flex-direction: column;
     gap: 7rem;

@@ -1,3 +1,7 @@
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
+
 const buttons = document.querySelectorAll(".controls > button");
 const slider = document.querySelector("#slide-container");
 const cards = [...document.querySelectorAll("#slide-container .card")];
