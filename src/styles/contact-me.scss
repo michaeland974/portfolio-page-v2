@@ -1,0 +1,113 @@
+@use './base/global';
+@use './base/utils';
+@use './base/media';
+
+@mixin flex-col{
+  display: flex;
+  flex-direction: column;    
+  align-items: center;
+}
+
+#get-in-touch{
+  margin: 3.5rem 0rem 7rem 0rem;
+  display: flex;
+  flex-direction: row-reverse;
+  font-family: Satoshi-Bold;
+  padding: 2rem;
+    
+  .content{
+    font-size: global.$fs-small;
+    @include flex-col;
+
+    @media screen and (min-width: media.$tablet-width) {
+      width: 50%;
+    }
+
+    a{
+      cursor: pointer;
+      text-decoration: none;
+      font-size: global.$fs-xl;
+      margin-bottom: -5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.25em;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+      border-radius: 20px;
+      color: global.$main;
+      background-color: global.$secondary;
+      transition: all 0.5s ease-in-out;
+      border: none;
+
+      &:hover{
+        span{
+          transform: scale(1) rotate(0deg);
+          height: 35px;
+          width: 35px;
+        }
+      }
+      
+      span{
+        height: 0px;
+        width: 0px;
+        border-radius: 50%;
+        background-color: global.$accent-1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: scale(0) rotate(-90deg);
+        transition: all .5s ease;
+      }
+
+      .icon{ 
+        height: 35%;  
+        width: 35%;
+        background: url("../svg/arrow.svg") no-repeat center;
+      }
+    }
+    
+    
+    p{
+      font-family: Satoshi-Regular;
+      line-height: 35px;
+
+      span{
+        color: global.$highlight-1;
+        font-family: Serif-Bold;
+      }
+    }
+  }
+    
+  .decoration-block{
+    display: none;
+    z-index: -1;
+    height: 100%;
+    width: 50%;
+    position: relative;
+    // transform: translateX(100%);
+
+    .wrapper{
+      $dimension: 45px;
+      height: $dimension;
+      aspect-ratio: 1/1;  
+      background-color: global.$light-grey; 
+      border-radius: 50%;
+      position: absolute;
+            
+      .blob{
+        @extend .wrapper;
+        background-color: global.$highlight-1;
+      }
+
+      &:first-child {
+        top: 50%;
+        left: 50%;
+      }
+    }
+
+    @media screen and (min-width: media.$tablet-width) {
+      display: block;
+    }
+  
+  }
+}

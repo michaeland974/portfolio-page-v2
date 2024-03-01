@@ -26,3 +26,29 @@ buttons.forEach((button) => {
     slider!.setAttribute("data-position", `${relativePositionValue}`);
   });
 });
+
+
+const sections = {
+  aboutMe: document.querySelector("#about-me"),
+  contact: document.querySelector("#get-in-touch"),
+  projects: document.querySelector("#projects")
+}
+
+const nav = {
+  aboutMe: document.querySelector("#about-me-nav"),
+  contact: document.querySelector("#contact-nav"),
+  projects: document.querySelector("#projects-nav")
+}
+
+nav.aboutMe?.addEventListener("click", () => {
+  sections.aboutMe?.scrollIntoView({ behavior: "smooth", block: "center"})
+})
+
+nav.contact?.addEventListener("click", () => {
+  sections.contact?.scrollIntoView({ behavior: "smooth", block: "center"})
+})
+
+nav.projects?.addEventListener("click", () => {
+  sections.projects?.scrollIntoView({ behavior: "smooth", block: "center"})
+})
+

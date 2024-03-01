@@ -27,14 +27,17 @@
         <nav>
           <ul>
             <li tabindex="0" role="button"
+                id="about-me-nav"
                 aria-expanded="false"
                 aria-controls="about-me">About me</li>
             <li tabindex="0" role="button" 
+                id="projects-nav"
                 aria-expanded="false"
                 aria-controls="projects">Projects</li>
             <li tabindex="0" role="button" 
+                id="contact-nav"
                 aria-expanded="false"
-                aria-controls="get-in-touch">Get in touch</li>
+                aria-controls="contact-me">Get in touch</li>
           </ul>
         </nav>
 
@@ -207,7 +210,29 @@
       </section>
 
       <section class="view" id="get-in-touch" aria-selected="false">
-        Hello World!
+        
+          <div class="content">
+            <a href="mailto:micanderson29@gmail.com">
+              Contact me 
+              <span>
+                <div class="icon"></div>
+              </span>
+            </a>
+            <p>just want to say hey!</p>
+          </div>
+          
+          <div class="decoration-block" aria-hidden="true">
+            <div class="wrapper">
+              <div class="blob"></div>
+            </div>
+            <div class="wrapper">
+              <div class="blob" id="test"></div>
+            </div>
+            <div class="wrapper">
+              <div class="blob" id="test"></div>
+            </div>
+          </div>
+
       </section>
     </main>
 

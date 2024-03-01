@@ -18,7 +18,7 @@ header{
   position: fixed;
   background-color: global.$main;
   transition: background-color global.$transition-timing;
-  z-index: 2;
+  z-index: 4;
 
   h1{
     display: none;
@@ -32,6 +32,10 @@ header{
       ul{
         display: flex;
         gap: $gap;
+
+        li{
+          cursor: pointer;
+        }
       }
     }
   }
