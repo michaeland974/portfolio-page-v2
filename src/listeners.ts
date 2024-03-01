@@ -2,9 +2,9 @@ const buttons = document.querySelectorAll(".controls > button");
 const slider = document.querySelector("#slide-container");
 const cards = [...document.querySelectorAll("#slide-container .card")];
 
-
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
+
     const motion = button.getAttribute("data-slider");
     const offset = (motion === "next" ? 1 : -1);
     const active = document.querySelector("[data-active]");

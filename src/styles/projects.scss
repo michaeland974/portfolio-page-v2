@@ -1,6 +1,18 @@
 @use './base/global';
 @use './base/media';
 
+@keyframes Slow-Fade{
+  0%{
+    opacity: 0;
+  }
+  90%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;  
+  }
+}
+
 @mixin flex-row{
   display: flex;
   justify-content: center;
@@ -23,6 +35,10 @@
     height: 70svh;
   }
 
+  @media screen and (min-height: media.$desktop-height) {
+    height: 50svh;
+  }
+
   h2{
     top: 0;
     position: absolute;
@@ -31,9 +47,9 @@
   }
 
   #slide-container{
-    --card-width: 10px;
+    --card-width: 25px;
     --card-gap: 1em;
-    --transition-timing: 0.7s;
+    --transition-timing: 0.6s;
 
     display: flex;
     flex-direction: row;
@@ -48,10 +64,10 @@
     --position: 0;
     --shift: calc((var(--card-width) + var(--card-gap)) * var(--position));
     left: var(--shift);
-    transition: all var(--transition-timing) ease;
 
     @media screen and (min-width: media.$desktop-width-xl) {
       margin-top: 2rem;
+      width: 40%;
     }
 
     @media screen and (min-width: media.$desktop-xxl) {
@@ -63,13 +79,93 @@
       height: 75%;
       width: var(--card-width);
       background-color: global.$secondary;
+      font-family: Serif-Light;
+      color: global.$main;
       border-radius: 20px;
       transition: all var(--transition-timing) ease;
-      
+
+      .opacity-wrapper{
+        opacity: 0;
+        display: flex;
+        height: 100%;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        padding: 1em;
+        position: relative;
+
+        //Fix for link group positioning on transition
+        transition: opacity 0.3s cubic-bezier(.27,1.03,.85,.8);
+
+
+        .content{
+          h3{
+            font-size: global.$fs-text;
+            line-height: 1em;
+            font-family: Serif-Regular;
+            padding-bottom: 0.25em;
+          }
+
+          .backlink{
+            color: global.$main;
+          }
+        }
+
+        .links{
+          position: absolute;
+          top: 5%;
+          right: 5%; 
+          display: flex;
+          gap: 1em;
+          border: 1px solid global.$main;
+          border-radius: 20px;
+          padding: 0.5em 1em 0.5em 1em;
+
+          .single{
+            padding: 0.25em;
+          }
+
+          a{
+            display: inline-block;
+            position: relative;
+            z-index: 3;
+            @include flex-row;
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            background-color: global.$accent-1;
+            
+            .github-site{
+              height: 85%;
+              width: 85%;
+            }
+
+            .icon{ 
+              height: 25%;  
+              width: 25%;
+              background: url("../svg/arrow.svg") no-repeat center;
+            }
+          }
+        }
+
+      }
+
       &[data-active]{
         opacity: 1;
         width: 65vw;  
+        
+        .opacity-wrapper{
+          opacity: 1;
+        }
+
+        @media screen and (min-width: media.$tablet-width) {
+          width: 50vw;
+        }
+
+        @media screen and (min-width: media.$desktop-width-xl) {
+          width: 40vw; 
+        }
       }
+      
 
       &:not([data-active]){
         opacity: 0.4;
