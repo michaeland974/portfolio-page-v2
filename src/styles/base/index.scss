@@ -25,6 +25,7 @@ body{
   color: global.$secondary;
   background: global.$main;
   height: 100svh;
+  width: 100vw;
   overflow-x: hidden;
 
   transition: background-color global.$transition-timing;
@@ -38,14 +39,15 @@ body{
 
   main{
     margin-top: global.$header-height;
-    padding: 2rem;
+    width: 100%;
+    // padding: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 6rem;
+    gap: 7rem;
 
-    & > section{
+    // & > section{
 
-    }
+    // }
     
     // & > section{
     //   height: global.$child-height;

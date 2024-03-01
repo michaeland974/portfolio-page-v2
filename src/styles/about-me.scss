@@ -25,6 +25,7 @@
 #about-me{
   @include utils.grid-children-stack;
   font-family: Satoshi-Bold;
+  padding: 2rem;
     
   .content{
     font-size: global.$fs-text;
@@ -34,8 +35,6 @@
     @media screen and (min-width: media.$tablet-width) {
       width: 50%;
     }
-
-   
 
     .group-1{
       @include flex-col;
@@ -63,13 +62,13 @@
     height: 100%;
     width: 50%;
     position: relative;
-    transform: translateX(125%);
+    transform: translateX(100%);
 
     .wrapper{
       $dimension: 45px;
       height: $dimension;
       aspect-ratio: 1/1;  
-      background-color: rgba(128, 128, 128, 0.212); 
+      background-color: global.$light-grey; 
       border-radius: 50%;
       position: absolute;
             

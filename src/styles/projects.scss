@@ -16,8 +16,12 @@
 
 #projects{
   @include flex-col;
-  height: 85svh;  
+  height: 60svh;  
   position: relative;
+
+  @media screen and (min-width: media.$desktop-width) {
+    height: 70svh;
+  }
 
   h2{
     top: 0;
@@ -46,8 +50,12 @@
     left: var(--shift);
     transition: all var(--transition-timing) ease;
 
-    @media screen and (min-width: media.$desktop-width) {
+    @media screen and (min-width: media.$desktop-width-xl) {
       margin-top: 2rem;
+    }
+
+    @media screen and (min-width: media.$desktop-xxl) {
+      margin-top: 3rem;
     }
 
     .card{
@@ -60,15 +68,11 @@
       
       &[data-active]{
         opacity: 1;
-        // transform: scale(1.7);
-        // height: 100%;
         width: 65vw;  
       }
 
       &:not([data-active]){
         opacity: 0.4;
-        // transform: scaleX(0.5);
-        // width: calc(var(--card-width) / 2);
       }
     }
     &[data-position="-2"]{ --position: -2; }
@@ -81,7 +85,7 @@
   .controls{
     @include flex-row;
     position: absolute;
-    top: 90%;
+    top: 95%;
     gap: 2rem;
 
     button{
@@ -92,19 +96,36 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      transition: all 0.6s ease; 
 
       .icon{
-        height: 40%;  
-        width: 40%;
+        height: 25%;  
+        width: 25%;
         background: url("../svg/arrow.svg") no-repeat center;
       }
 
       &#next{
         transform: rotate(45deg);
+        box-shadow: 2px 0px 0px 1px global.$light-grey;
+
+        &:hover{
+          transform: rotate(45deg) scale(1.1);
+        }
+        &:active{
+          transform: rotate(45deg) scale(0.9);
+        }
       }
 
       &#prev{
         transform: rotate(-135deg);
+        box-shadow: 0px -3px 0px global.$light-grey;
+
+        &:hover{
+          transform: rotate(-135deg) scale(1.1);
+        }
+        &:active{
+          transform: rotate(-135deg) scale(0.9);
+        }
       }
 
     }

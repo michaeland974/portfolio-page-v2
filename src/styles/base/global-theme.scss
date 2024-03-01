@@ -11,7 +11,7 @@ body{
   --highlight-2: #C9CA75;
 
   --grey: #21212192;
-  --light-grey: #2121214e;
+  --light-grey: rgba(128, 128, 128, 0.212);
 }
 
 body:has([data-theme="dark"]:checked){
@@ -24,4 +24,5 @@ body:has([data-theme="dark"]:checked){
   --highlight-1: #C9CA75;
   --highlight-1-faded: hsl(61, 45%, 63%, 0.5);
   --highlight-2: #903D41;
+  --light-grey: rgba(128, 128, 128, 0.212);
 }
