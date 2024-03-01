@@ -1,0 +1,86 @@
+@font-face {
+  font-family: Satoshi-Bold;
+  src: url("./../fonts/Satoshi-Bold.otf");
+}
+@font-face {
+  font-family: Satoshi-Light;
+  src: url("./../fonts/Satoshi-Light.otf");
+}
+@font-face {
+  font-family: Satoshi-LightItalic;
+  src: url("./../fonts/Satoshi-LightItalic.otf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: Satoshi-Regular;
+  src: url("./../fonts/Satoshi-Regular.otf");
+}
+@font-face {
+  font-family: Serif-Regular;
+  src: url("./../fonts/SourceSerif4-Regular.ttf");
+}
+@font-face {
+  font-family: Serif-Light;
+  src: url("./../fonts/SourceSerif4-Light.ttf");
+}
+@font-face {
+  font-family: Serif-Bold;
+  src: url("./../fonts/SourceSerif4-Bold.ttf");
+}
+@keyframes Fade-Out-OnLoad {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  80% {
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes Circle {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+#onload-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 120px;
+  aspect-ratio: 1/1;
+  display: grid;
+  align-items: center;
+  animation: Fade-Out-OnLoad 0.35s ease-out forwards;
+  animation-delay: 1.5s;
+}
+#onload-wrapper > * {
+  grid-area: 1/1;
+}
+#onload-wrapper svg {
+  height: 100%;
+  width: 100%;
+}
+#onload-wrapper svg [data-type=background] {
+  fill: var(--secondary);
+}
+#onload-wrapper svg [data-type=stroke] {
+  fill: none;
+  stroke: var(--main);
+  stroke-miterlimit: 10;
+  stroke-width: 0.5px;
+  stroke-dashoffset: 110;
+  stroke-dasharray: 110;
+  animation: Circle 1s ease forwards;
+  animation-delay: 0.4s;
+}
+#onload-wrapper #icon-glasses {
+  justify-self: center;
+  height: 75%;
+  width: 75%;
+  background: url("../svg/glasses.svg") no-repeat center;
+}

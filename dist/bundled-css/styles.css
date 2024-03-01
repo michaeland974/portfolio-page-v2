@@ -1,0 +1,857 @@
+@font-face {
+  font-family: Satoshi-Bold;
+  src: url("./../fonts/Satoshi-Bold.otf");
+}
+@font-face {
+  font-family: Satoshi-Light;
+  src: url("./../fonts/Satoshi-Light.otf");
+}
+@font-face {
+  font-family: Satoshi-LightItalic;
+  src: url("./../fonts/Satoshi-LightItalic.otf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: Satoshi-Regular;
+  src: url("./../fonts/Satoshi-Regular.otf");
+}
+@font-face {
+  font-family: Serif-Regular;
+  src: url("./../fonts/SourceSerif4-Regular.ttf");
+}
+@font-face {
+  font-family: Serif-Light;
+  src: url("./../fonts/SourceSerif4-Light.ttf");
+}
+@font-face {
+  font-family: Serif-Bold;
+  src: url("./../fonts/SourceSerif4-Bold.ttf");
+}
+
+
+@font-face {
+  font-family: Satoshi-Bold;
+  src: url("./../fonts/Satoshi-Bold.otf");
+}
+@font-face {
+  font-family: Satoshi-Light;
+  src: url("./../fonts/Satoshi-Light.otf");
+}
+@font-face {
+  font-family: Satoshi-LightItalic;
+  src: url("./../fonts/Satoshi-LightItalic.otf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: Satoshi-Regular;
+  src: url("./../fonts/Satoshi-Regular.otf");
+}
+@font-face {
+  font-family: Serif-Regular;
+  src: url("./../fonts/SourceSerif4-Regular.ttf");
+}
+@font-face {
+  font-family: Serif-Light;
+  src: url("./../fonts/SourceSerif4-Light.ttf");
+}
+@font-face {
+  font-family: Serif-Bold;
+  src: url("./../fonts/SourceSerif4-Bold.ttf");
+}
+@keyframes Floating {
+  0% {
+    transform: translate(-40%, -60%);
+  }
+  100% {
+    transform: translate(0px, -75px);
+  }
+}
+#about-me {
+  display: grid;
+  isolation: isolate;
+  font-family: Satoshi-Bold;
+  padding: 2rem;
+}
+#about-me > * {
+  grid-area: 1/1;
+}
+#about-me .content {
+  font-size: clamp(1.6rem, 2.5vw, 1.75rem);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+@media screen and (min-width: 600px) {
+  #about-me .content {
+    width: 50%;
+  }
+}
+#about-me .content .group-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#about-me .content .group-1 h2 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  margin-bottom: -5px;
+}
+#about-me .content p {
+  font-family: Satoshi-Regular;
+  line-height: 35px;
+}
+#about-me .content p span {
+  color: var(--highlight-1);
+  font-family: Serif-Bold;
+}
+#about-me .decoration-block {
+  display: none;
+  z-index: -1;
+  height: 100%;
+  width: 50%;
+  position: relative;
+  transform: translateX(100%);
+}
+#about-me .decoration-block .wrapper, #about-me .decoration-block .wrapper .blob {
+  height: 45px;
+  aspect-ratio: 1/1;
+  background-color: var(--light-grey);
+  border-radius: 50%;
+  position: absolute;
+}
+#about-me .decoration-block .wrapper .blob {
+  background-color: var(--highlight-1);
+}
+#about-me .decoration-block .wrapper:first-child, #about-me .decoration-block .wrapper .blob:first-child {
+  top: 50%;
+  left: 50%;
+}
+@media screen and (min-width: 600px) {
+  #about-me .decoration-block {
+    display: block;
+  }
+}
+@font-face {
+  font-family: Satoshi-Bold;
+  src: url("./../fonts/Satoshi-Bold.otf");
+}
+@font-face {
+  font-family: Satoshi-Light;
+  src: url("./../fonts/Satoshi-Light.otf");
+}
+@font-face {
+  font-family: Satoshi-LightItalic;
+  src: url("./../fonts/Satoshi-LightItalic.otf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: Satoshi-Regular;
+  src: url("./../fonts/Satoshi-Regular.otf");
+}
+@font-face {
+  font-family: Serif-Regular;
+  src: url("./../fonts/SourceSerif4-Regular.ttf");
+}
+@font-face {
+  font-family: Serif-Light;
+  src: url("./../fonts/SourceSerif4-Light.ttf");
+}
+@font-face {
+  font-family: Serif-Bold;
+  src: url("./../fonts/SourceSerif4-Bold.ttf");
+}
+#get-in-touch {
+  margin: 3.5rem 0rem 7rem 0rem;
+  display: flex;
+  flex-direction: row-reverse;
+  font-family: Satoshi-Bold;
+  padding: 2rem;
+}
+#get-in-touch .content {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 600px) {
+  #get-in-touch .content {
+    width: 50%;
+  }
+}
+#get-in-touch .content a {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  margin-bottom: -5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25em;
+  padding: 0.25em 0.5em 0.25em 0.5em;
+  border-radius: 20px;
+  color: var(--main);
+  background-color: var(--secondary);
+  transition: all 0.5s ease-in-out;
+  border: none;
+}
+#get-in-touch .content a:hover span {
+  transform: scale(1) rotate(0deg);
+  height: 35px;
+  width: 35px;
+}
+#get-in-touch .content a span {
+  height: 0px;
+  width: 0px;
+  border-radius: 50%;
+  background-color: var(--accent-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0) rotate(-90deg);
+  transition: all 0.5s ease;
+}
+#get-in-touch .content a .icon {
+  height: 35%;
+  width: 35%;
+  background: url("../svg/arrow.svg") no-repeat center;
+}
+#get-in-touch .content p {
+  font-family: Satoshi-Regular;
+  line-height: 35px;
+}
+#get-in-touch .content p span {
+  color: var(--highlight-1);
+  font-family: Serif-Bold;
+}
+#get-in-touch .decoration-block {
+  display: none;
+  z-index: -1;
+  height: 100%;
+  width: 50%;
+  position: relative;
+}
+#get-in-touch .decoration-block .wrapper, #get-in-touch .decoration-block .wrapper .blob {
+  height: 45px;
+  aspect-ratio: 1/1;
+  background-color: var(--light-grey);
+  border-radius: 50%;
+  position: absolute;
+}
+#get-in-touch .decoration-block .wrapper .blob {
+  background-color: var(--highlight-1);
+}
+#get-in-touch .decoration-block .wrapper:first-child, #get-in-touch .decoration-block .wrapper .blob:first-child {
+  top: 50%;
+  left: 50%;
+}
+@media screen and (min-width: 600px) {
+  #get-in-touch .decoration-block {
+    display: block;
+  }
+}
+@font-face {
+  font-family: Satoshi-Bold;
+  src: url("./../fonts/Satoshi-Bold.otf");
+}
+@font-face {
+  font-family: Satoshi-Light;
+  src: url("./../fonts/Satoshi-Light.otf");
+}
+@font-face {
+  font-family: Satoshi-LightItalic;
+  src: url("./../fonts/Satoshi-LightItalic.otf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: Satoshi-Regular;
+  src: url("./../fonts/Satoshi-Regular.otf");
+}
+@font-face {
+  font-family: Serif-Regular;
+  src: url("./../fonts/SourceSerif4-Regular.ttf");
+}
+@font-face {
+  font-family: Serif-Light;
+  src: url("./../fonts/SourceSerif4-Light.ttf");
+}
+@font-face {
+  font-family: Serif-Bold;
+  src: url("./../fonts/SourceSerif4-Bold.ttf");
+}
+@keyframes Fade-Out-OnLoad {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  80% {
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes Circle {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+#onload-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 120px;
+  aspect-ratio: 1/1;
+  display: grid;
+  align-items: center;
+  animation: Fade-Out-OnLoad 0.35s ease-out forwards;
+  animation-delay: 1.5s;
+}
+#onload-wrapper > * {
+  grid-area: 1/1;
+}
+#onload-wrapper svg {
+  height: 100%;
+  width: 100%;
+}
+#onload-wrapper svg [data-type=background] {
+  fill: var(--secondary);
+}
+#onload-wrapper svg [data-type=stroke] {
+  fill: none;
+  stroke: var(--main);
+  stroke-miterlimit: 10;
+  stroke-width: 0.5px;
+  stroke-dashoffset: 110;
+  stroke-dasharray: 110;
+  animation: Circle 1s ease forwards;
+  animation-delay: 0.4s;
+}
+#onload-wrapper #icon-glasses {
+  justify-self: center;
+  height: 75%;
+  width: 75%;
+  background: url("../svg/glasses.svg") no-repeat center;
+}
+@font-face {
+  font-family: Satoshi-Bold;
+  src: url("./../fonts/Satoshi-Bold.otf");
+}
+@font-face {
+  font-family: Satoshi-Light;
+  src: url("./../fonts/Satoshi-Light.otf");
+}
+@font-face {
+  font-family: Satoshi-LightItalic;
+  src: url("./../fonts/Satoshi-LightItalic.otf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: Satoshi-Regular;
+  src: url("./../fonts/Satoshi-Regular.otf");
+}
+@font-face {
+  font-family: Serif-Regular;
+  src: url("./../fonts/SourceSerif4-Regular.ttf");
+}
+@font-face {
+  font-family: Serif-Light;
+  src: url("./../fonts/SourceSerif4-Light.ttf");
+}
+@font-face {
+  font-family: Serif-Bold;
+  src: url("./../fonts/SourceSerif4-Bold.ttf");
+}
+body {
+  --brand-color: #d25168;
+  --main: #ffe0b5;
+  --secondary: #290a10;
+  --accent-1: #a4af69;
+  --accent-2: #EDE580;
+  --highlight-1: #903D41;
+  --highlight-1-faded: hsla(357, 40%, 40%, 0.5);
+  --highlight-2: #C9CA75;
+  --grey: #21212192;
+  --light-grey: rgba(128, 128, 128, 0.212);
+}
+
+body:has([data-theme=dark]:checked) {
+  --main: hsl(349, 59%, 10%);
+  --secondary: #ffe0b5;
+  --accent-1: #EDE580;
+  --accent-2: #a4af69;
+  --highlight-1: #C9CA75;
+  --highlight-1-faded: hsl(61, 45%, 63%, 0.5);
+  --highlight-2: #903D41;
+  --light-grey: rgba(128, 128, 128, 0.212);
+}
+@font-face {
+  font-family: Satoshi-Bold;
+  src: url("./../fonts/Satoshi-Bold.otf");
+}
+@font-face {
+  font-family: Satoshi-Light;
+  src: url("./../fonts/Satoshi-Light.otf");
+}
+@font-face {
+  font-family: Satoshi-LightItalic;
+  src: url("./../fonts/Satoshi-LightItalic.otf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: Satoshi-Regular;
+  src: url("./../fonts/Satoshi-Regular.otf");
+}
+@font-face {
+  font-family: Serif-Regular;
+  src: url("./../fonts/SourceSerif4-Regular.ttf");
+}
+@font-face {
+  font-family: Serif-Light;
+  src: url("./../fonts/SourceSerif4-Light.ttf");
+}
+@font-face {
+  font-family: Serif-Bold;
+  src: url("./../fonts/SourceSerif4-Bold.ttf");
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: Satoshi-Regular;
+  height: 65px;
+  width: 100%;
+  padding: 2rem;
+  position: fixed;
+  background-color: var(--main);
+  transition: background-color 0.6s;
+  z-index: 4;
+}
+header h1 {
+  display: none;
+}
+header .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+header .wrapper nav ul {
+  display: flex;
+  gap: 1em;
+}
+header .wrapper nav ul li {
+  cursor: pointer;
+}
+@media screen and (min-width: 600px) {
+  header h1 {
+    display: flex;
+  }
+  header .wrapper {
+    width: auto;
+    gap: 2em;
+  }
+  header .wrapper nav ul {
+    gap: 2em;
+  }
+}
+@font-face {
+  font-family: Satoshi-Bold;
+  src: url("./../fonts/Satoshi-Bold.otf");
+}
+@font-face {
+  font-family: Satoshi-Light;
+  src: url("./../fonts/Satoshi-Light.otf");
+}
+@font-face {
+  font-family: Satoshi-LightItalic;
+  src: url("./../fonts/Satoshi-LightItalic.otf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: Satoshi-Regular;
+  src: url("./../fonts/Satoshi-Regular.otf");
+}
+@font-face {
+  font-family: Serif-Regular;
+  src: url("./../fonts/SourceSerif4-Regular.ttf");
+}
+@font-face {
+  font-family: Serif-Light;
+  src: url("./../fonts/SourceSerif4-Light.ttf");
+}
+@font-face {
+  font-family: Serif-Bold;
+  src: url("./../fonts/SourceSerif4-Bold.ttf");
+}
+@keyframes Scroll-Onload {
+  0% {
+    overflow-y: hidden;
+  }
+  100% {
+    overflow-y: scroll;
+  }
+}
+@keyframes Fade-In-OnLoad {
+  0% {
+    filter: blur(10px);
+  }
+  60% {
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--secondary);
+  background: var(--main);
+  height: 100svh;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  transition: background-color 0.6s;
+  animation: Scroll-Onload 1s ease-out forwards;
+  animation-delay: 1.5s;
+}
+body > *:not(#onload-wrapper) {
+  opacity: 0;
+  visibility: hidden;
+  animation: Fade-In-OnLoad 1s ease-out forwards;
+  animation-delay: 1.5s;
+}
+body main {
+  margin-top: 65px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+}
+@font-face {
+  font-family: Satoshi-Bold;
+  src: url("./../fonts/Satoshi-Bold.otf");
+}
+@font-face {
+  font-family: Satoshi-Light;
+  src: url("./../fonts/Satoshi-Light.otf");
+}
+@font-face {
+  font-family: Satoshi-LightItalic;
+  src: url("./../fonts/Satoshi-LightItalic.otf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: Satoshi-Regular;
+  src: url("./../fonts/Satoshi-Regular.otf");
+}
+@font-face {
+  font-family: Serif-Regular;
+  src: url("./../fonts/SourceSerif4-Regular.ttf");
+}
+@font-face {
+  font-family: Serif-Light;
+  src: url("./../fonts/SourceSerif4-Light.ttf");
+}
+@font-face {
+  font-family: Serif-Bold;
+  src: url("./../fonts/SourceSerif4-Bold.ttf");
+}
+@keyframes Slow-Fade {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60svh;
+  position: relative;
+}
+@media screen and (min-width: 1050px) {
+  #projects {
+    height: 70svh;
+  }
+}
+@media screen and (min-height: 900px) {
+  #projects {
+    height: 50svh;
+  }
+}
+#projects h2 {
+  top: 0;
+  position: absolute;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-family: Satoshi-Bold;
+}
+#projects #slide-container {
+  --card-width: 25px;
+  --card-gap: 1em;
+  --transition-timing: 0.6s;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: var(--card-gap);
+  margin-top: 1rem;
+  position: relative;
+  height: 100%;
+  width: 50%;
+  --position: 0;
+  --shift: calc((var(--card-width) + var(--card-gap)) * var(--position));
+  left: var(--shift);
+}
+@media screen and (min-width: 1500px) {
+  #projects #slide-container {
+    margin-top: 2rem;
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1700px) {
+  #projects #slide-container {
+    margin-top: 3rem;
+  }
+}
+#projects #slide-container .card {
+  flex-shrink: 0;
+  height: 75%;
+  width: var(--card-width);
+  background-color: var(--secondary);
+  font-family: Serif-Light;
+  color: var(--main);
+  border-radius: 20px;
+  transition: width 0.8s ease;
+}
+#projects #slide-container .card .opacity-wrapper {
+  opacity: 0;
+  display: flex;
+  height: 100%;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  padding: 1em;
+  position: relative;
+  transition: opacity 0.1s cubic-bezier(0.27, 1.03, 0.85, 0.8);
+}
+#projects #slide-container .card .opacity-wrapper .content h3 {
+  font-size: clamp(1.6rem, 2.5vw, 1.75rem);
+  line-height: 1em;
+  font-family: Serif-Regular;
+  padding-bottom: 0.25em;
+}
+#projects #slide-container .card .opacity-wrapper .content .backlink {
+  color: var(--main);
+}
+#projects #slide-container .card .opacity-wrapper .links {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  display: flex;
+  gap: 1em;
+  border: 1px solid var(--main);
+  border-radius: 20px;
+  padding: 0.5em 1em 0.5em 1em;
+}
+#projects #slide-container .card .opacity-wrapper .links .single {
+  padding: 0.25em;
+}
+#projects #slide-container .card .opacity-wrapper .links a {
+  display: inline-block;
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background-color: var(--accent-1);
+}
+#projects #slide-container .card .opacity-wrapper .links a .github-site {
+  height: 85%;
+  width: 85%;
+}
+#projects #slide-container .card .opacity-wrapper .links a .icon {
+  height: 25%;
+  width: 25%;
+  background: url("../svg/arrow.svg") no-repeat center;
+}
+#projects #slide-container .card[data-active] {
+  opacity: 1;
+  width: 65vw;
+}
+#projects #slide-container .card[data-active] .opacity-wrapper {
+  opacity: 1;
+}
+@media screen and (min-width: 600px) {
+  #projects #slide-container .card[data-active] {
+    width: 50vw;
+  }
+}
+@media screen and (min-width: 1500px) {
+  #projects #slide-container .card[data-active] {
+    width: 40vw;
+  }
+}
+#projects #slide-container .card:not([data-active]) {
+  opacity: 0.4;
+}
+#projects #slide-container[data-position="-2"] {
+  --position: -2;
+}
+#projects #slide-container[data-position="-1"] {
+  --position: -1;
+}
+#projects #slide-container[data-position="0"] {
+  --position: 0;
+}
+#projects #slide-container[data-position="1"] {
+  --position: 1;
+}
+#projects #slide-container[data-position="2"] {
+  --position: 2;
+}
+#projects .controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 95%;
+  gap: 2rem;
+}
+#projects .controls button {
+  width: 60px;
+  height: 60px;
+  background-color: var(--accent-1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.6s ease;
+}
+#projects .controls button .icon {
+  height: 25%;
+  width: 25%;
+  background: url("../svg/arrow.svg") no-repeat center;
+}
+#projects .controls button#next {
+  transform: rotate(45deg);
+  box-shadow: 2px 0px 0px 1px var(--light-grey);
+}
+#projects .controls button#next:hover {
+  transform: rotate(45deg) scale(1.1);
+}
+#projects .controls button#next:active {
+  transform: rotate(45deg) scale(0.9);
+}
+#projects .controls button#prev {
+  transform: rotate(-135deg);
+  box-shadow: 0px -3px 0px var(--light-grey);
+}
+#projects .controls button#prev:hover {
+  transform: rotate(-135deg) scale(1.1);
+}
+#projects .controls button#prev:active {
+  transform: rotate(-135deg) scale(0.9);
+}
+@font-face {
+  font-family: Satoshi-Bold;
+  src: url("./../fonts/Satoshi-Bold.otf");
+}
+@font-face {
+  font-family: Satoshi-Light;
+  src: url("./../fonts/Satoshi-Light.otf");
+}
+@font-face {
+  font-family: Satoshi-LightItalic;
+  src: url("./../fonts/Satoshi-LightItalic.otf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: Satoshi-Regular;
+  src: url("./../fonts/Satoshi-Regular.otf");
+}
+@font-face {
+  font-family: Serif-Regular;
+  src: url("./../fonts/SourceSerif4-Regular.ttf");
+}
+@font-face {
+  font-family: Serif-Light;
+  src: url("./../fonts/SourceSerif4-Light.ttf");
+}
+@font-face {
+  font-family: Serif-Bold;
+  src: url("./../fonts/SourceSerif4-Bold.ttf");
+}
+#checkbox-wrapper {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+}
+#checkbox-wrapper #dark-mode-check {
+  display: none;
+}
+#checkbox-wrapper svg {
+  height: 100%;
+  width: 100%;
+}
+#checkbox-wrapper [data-type=background] {
+  fill: var(--secondary);
+  transition: ease all 0.6s;
+  -webkit-transition: ease all 0.6s;
+}
+#checkbox-wrapper [data-type=stroke] {
+  fill: none;
+  stroke: var(--main);
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+  stroke-dashoffset: 110;
+  stroke-dasharray: 110;
+  transition: ease all 0.6s;
+  -webkit-transition: ease all 0.6s;
+}
+#checkbox-wrapper input[type=checkbox]:checked + svg > [data-type=stroke] {
+  stroke-dashoffset: 0;
+}
+#checkbox-wrapper input[type=checkbox] ~ #icon-overlay {
+  height: 60%;
+  width: 60%;
+  background: url("../svg/sun.svg") no-repeat center;
+}
+#checkbox-wrapper input[type=checkbox]:checked ~ #icon-overlay {
+  height: 75%;
+  width: 75%;
+  background: url("../svg/moon.svg") no-repeat center;
+}
+#checkbox-wrapper #icon-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

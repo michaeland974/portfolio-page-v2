@@ -1,0 +1,234 @@
+@font-face {
+  font-family: Satoshi-Bold;
+  src: url("./../fonts/Satoshi-Bold.otf");
+}
+@font-face {
+  font-family: Satoshi-Light;
+  src: url("./../fonts/Satoshi-Light.otf");
+}
+@font-face {
+  font-family: Satoshi-LightItalic;
+  src: url("./../fonts/Satoshi-LightItalic.otf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: Satoshi-Regular;
+  src: url("./../fonts/Satoshi-Regular.otf");
+}
+@font-face {
+  font-family: Serif-Regular;
+  src: url("./../fonts/SourceSerif4-Regular.ttf");
+}
+@font-face {
+  font-family: Serif-Light;
+  src: url("./../fonts/SourceSerif4-Light.ttf");
+}
+@font-face {
+  font-family: Serif-Bold;
+  src: url("./../fonts/SourceSerif4-Bold.ttf");
+}
+@keyframes Slow-Fade {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60svh;
+  position: relative;
+}
+@media screen and (min-width: 1050px) {
+  #projects {
+    height: 70svh;
+  }
+}
+@media screen and (min-height: 900px) {
+  #projects {
+    height: 50svh;
+  }
+}
+#projects h2 {
+  top: 0;
+  position: absolute;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-family: Satoshi-Bold;
+}
+#projects #slide-container {
+  --card-width: 25px;
+  --card-gap: 1em;
+  --transition-timing: 0.6s;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: var(--card-gap);
+  margin-top: 1rem;
+  position: relative;
+  height: 100%;
+  width: 50%;
+  --position: 0;
+  --shift: calc((var(--card-width) + var(--card-gap)) * var(--position));
+  left: var(--shift);
+}
+@media screen and (min-width: 1500px) {
+  #projects #slide-container {
+    margin-top: 2rem;
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1700px) {
+  #projects #slide-container {
+    margin-top: 3rem;
+  }
+}
+#projects #slide-container .card {
+  flex-shrink: 0;
+  height: 75%;
+  width: var(--card-width);
+  background-color: var(--secondary);
+  font-family: Serif-Light;
+  color: var(--main);
+  border-radius: 20px;
+  transition: width 0.8s ease;
+}
+#projects #slide-container .card .opacity-wrapper {
+  opacity: 0;
+  display: flex;
+  height: 100%;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  padding: 1em;
+  position: relative;
+  transition: opacity 0.1s cubic-bezier(0.27, 1.03, 0.85, 0.8);
+}
+#projects #slide-container .card .opacity-wrapper .content h3 {
+  font-size: clamp(1.6rem, 2.5vw, 1.75rem);
+  line-height: 1em;
+  font-family: Serif-Regular;
+  padding-bottom: 0.25em;
+}
+#projects #slide-container .card .opacity-wrapper .content .backlink {
+  color: var(--main);
+}
+#projects #slide-container .card .opacity-wrapper .links {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  display: flex;
+  gap: 1em;
+  border: 1px solid var(--main);
+  border-radius: 20px;
+  padding: 0.5em 1em 0.5em 1em;
+}
+#projects #slide-container .card .opacity-wrapper .links .single {
+  padding: 0.25em;
+}
+#projects #slide-container .card .opacity-wrapper .links a {
+  display: inline-block;
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background-color: var(--accent-1);
+}
+#projects #slide-container .card .opacity-wrapper .links a .github-site {
+  height: 85%;
+  width: 85%;
+}
+#projects #slide-container .card .opacity-wrapper .links a .icon {
+  height: 25%;
+  width: 25%;
+  background: url("../svg/arrow.svg") no-repeat center;
+}
+#projects #slide-container .card[data-active] {
+  opacity: 1;
+  width: 65vw;
+}
+#projects #slide-container .card[data-active] .opacity-wrapper {
+  opacity: 1;
+}
+@media screen and (min-width: 600px) {
+  #projects #slide-container .card[data-active] {
+    width: 50vw;
+  }
+}
+@media screen and (min-width: 1500px) {
+  #projects #slide-container .card[data-active] {
+    width: 40vw;
+  }
+}
+#projects #slide-container .card:not([data-active]) {
+  opacity: 0.4;
+}
+#projects #slide-container[data-position="-2"] {
+  --position: -2;
+}
+#projects #slide-container[data-position="-1"] {
+  --position: -1;
+}
+#projects #slide-container[data-position="0"] {
+  --position: 0;
+}
+#projects #slide-container[data-position="1"] {
+  --position: 1;
+}
+#projects #slide-container[data-position="2"] {
+  --position: 2;
+}
+#projects .controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 95%;
+  gap: 2rem;
+}
+#projects .controls button {
+  width: 60px;
+  height: 60px;
+  background-color: var(--accent-1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.6s ease;
+}
+#projects .controls button .icon {
+  height: 25%;
+  width: 25%;
+  background: url("../svg/arrow.svg") no-repeat center;
+}
+#projects .controls button#next {
+  transform: rotate(45deg);
+  box-shadow: 2px 0px 0px 1px var(--light-grey);
+}
+#projects .controls button#next:hover {
+  transform: rotate(45deg) scale(1.1);
+}
+#projects .controls button#next:active {
+  transform: rotate(45deg) scale(0.9);
+}
+#projects .controls button#prev {
+  transform: rotate(-135deg);
+  box-shadow: 0px -3px 0px var(--light-grey);
+}
+#projects .controls button#prev:hover {
+  transform: rotate(-135deg) scale(1.1);
+}
+#projects .controls button#prev:active {
+  transform: rotate(-135deg) scale(0.9);
+}

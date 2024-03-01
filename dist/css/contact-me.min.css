@@ -1,0 +1,119 @@
+@font-face {
+  font-family: Satoshi-Bold;
+  src: url("./../fonts/Satoshi-Bold.otf");
+}
+@font-face {
+  font-family: Satoshi-Light;
+  src: url("./../fonts/Satoshi-Light.otf");
+}
+@font-face {
+  font-family: Satoshi-LightItalic;
+  src: url("./../fonts/Satoshi-LightItalic.otf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: Satoshi-Regular;
+  src: url("./../fonts/Satoshi-Regular.otf");
+}
+@font-face {
+  font-family: Serif-Regular;
+  src: url("./../fonts/SourceSerif4-Regular.ttf");
+}
+@font-face {
+  font-family: Serif-Light;
+  src: url("./../fonts/SourceSerif4-Light.ttf");
+}
+@font-face {
+  font-family: Serif-Bold;
+  src: url("./../fonts/SourceSerif4-Bold.ttf");
+}
+#get-in-touch {
+  margin: 3.5rem 0rem 7rem 0rem;
+  display: flex;
+  flex-direction: row-reverse;
+  font-family: Satoshi-Bold;
+  padding: 2rem;
+}
+#get-in-touch .content {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 600px) {
+  #get-in-touch .content {
+    width: 50%;
+  }
+}
+#get-in-touch .content a {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  margin-bottom: -5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25em;
+  padding: 0.25em 0.5em 0.25em 0.5em;
+  border-radius: 20px;
+  color: var(--main);
+  background-color: var(--secondary);
+  transition: all 0.5s ease-in-out;
+  border: none;
+}
+#get-in-touch .content a:hover span {
+  transform: scale(1) rotate(0deg);
+  height: 35px;
+  width: 35px;
+}
+#get-in-touch .content a span {
+  height: 0px;
+  width: 0px;
+  border-radius: 50%;
+  background-color: var(--accent-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0) rotate(-90deg);
+  transition: all 0.5s ease;
+}
+#get-in-touch .content a .icon {
+  height: 35%;
+  width: 35%;
+  background: url("../svg/arrow.svg") no-repeat center;
+}
+#get-in-touch .content p {
+  font-family: Satoshi-Regular;
+  line-height: 35px;
+}
+#get-in-touch .content p span {
+  color: var(--highlight-1);
+  font-family: Serif-Bold;
+}
+#get-in-touch .decoration-block {
+  display: none;
+  z-index: -1;
+  height: 100%;
+  width: 50%;
+  position: relative;
+}
+#get-in-touch .decoration-block .wrapper, #get-in-touch .decoration-block .wrapper .blob {
+  height: 45px;
+  aspect-ratio: 1/1;
+  background-color: var(--light-grey);
+  border-radius: 50%;
+  position: absolute;
+}
+#get-in-touch .decoration-block .wrapper .blob {
+  background-color: var(--highlight-1);
+}
+#get-in-touch .decoration-block .wrapper:first-child, #get-in-touch .decoration-block .wrapper .blob:first-child {
+  top: 50%;
+  left: 50%;
+}
+@media screen and (min-width: 600px) {
+  #get-in-touch .decoration-block {
+    display: block;
+  }
+}

@@ -1,0 +1,80 @@
+@font-face {
+  font-family: Satoshi-Bold;
+  src: url("./../fonts/Satoshi-Bold.otf");
+}
+@font-face {
+  font-family: Satoshi-Light;
+  src: url("./../fonts/Satoshi-Light.otf");
+}
+@font-face {
+  font-family: Satoshi-LightItalic;
+  src: url("./../fonts/Satoshi-LightItalic.otf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: Satoshi-Regular;
+  src: url("./../fonts/Satoshi-Regular.otf");
+}
+@font-face {
+  font-family: Serif-Regular;
+  src: url("./../fonts/SourceSerif4-Regular.ttf");
+}
+@font-face {
+  font-family: Serif-Light;
+  src: url("./../fonts/SourceSerif4-Light.ttf");
+}
+@font-face {
+  font-family: Serif-Bold;
+  src: url("./../fonts/SourceSerif4-Bold.ttf");
+}
+#checkbox-wrapper {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+}
+#checkbox-wrapper #dark-mode-check {
+  display: none;
+}
+#checkbox-wrapper svg {
+  height: 100%;
+  width: 100%;
+}
+#checkbox-wrapper [data-type=background] {
+  fill: var(--secondary);
+  transition: ease all 0.6s;
+  -webkit-transition: ease all 0.6s;
+}
+#checkbox-wrapper [data-type=stroke] {
+  fill: none;
+  stroke: var(--main);
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+  stroke-dashoffset: 110;
+  stroke-dasharray: 110;
+  transition: ease all 0.6s;
+  -webkit-transition: ease all 0.6s;
+}
+#checkbox-wrapper input[type=checkbox]:checked + svg > [data-type=stroke] {
+  stroke-dashoffset: 0;
+}
+#checkbox-wrapper input[type=checkbox] ~ #icon-overlay {
+  height: 60%;
+  width: 60%;
+  background: url("../svg/sun.svg") no-repeat center;
+}
+#checkbox-wrapper input[type=checkbox]:checked ~ #icon-overlay {
+  height: 75%;
+  width: 75%;
+  background: url("../svg/moon.svg") no-repeat center;
+}
+#checkbox-wrapper #icon-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

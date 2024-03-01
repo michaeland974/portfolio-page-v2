@@ -1,0 +1,103 @@
+@font-face {
+  font-family: Satoshi-Bold;
+  src: url("./../fonts/Satoshi-Bold.otf");
+}
+@font-face {
+  font-family: Satoshi-Light;
+  src: url("./../fonts/Satoshi-Light.otf");
+}
+@font-face {
+  font-family: Satoshi-LightItalic;
+  src: url("./../fonts/Satoshi-LightItalic.otf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: Satoshi-Regular;
+  src: url("./../fonts/Satoshi-Regular.otf");
+}
+@font-face {
+  font-family: Serif-Regular;
+  src: url("./../fonts/SourceSerif4-Regular.ttf");
+}
+@font-face {
+  font-family: Serif-Light;
+  src: url("./../fonts/SourceSerif4-Light.ttf");
+}
+@font-face {
+  font-family: Serif-Bold;
+  src: url("./../fonts/SourceSerif4-Bold.ttf");
+}
+@keyframes Floating {
+  0% {
+    transform: translate(-40%, -60%);
+  }
+  100% {
+    transform: translate(0px, -75px);
+  }
+}
+#about-me {
+  display: grid;
+  isolation: isolate;
+  font-family: Satoshi-Bold;
+  padding: 2rem;
+}
+#about-me > * {
+  grid-area: 1/1;
+}
+#about-me .content {
+  font-size: clamp(1.6rem, 2.5vw, 1.75rem);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+@media screen and (min-width: 600px) {
+  #about-me .content {
+    width: 50%;
+  }
+}
+#about-me .content .group-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#about-me .content .group-1 h2 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  margin-bottom: -5px;
+}
+#about-me .content p {
+  font-family: Satoshi-Regular;
+  line-height: 35px;
+}
+#about-me .content p span {
+  color: var(--highlight-1);
+  font-family: Serif-Bold;
+}
+#about-me .decoration-block {
+  display: none;
+  z-index: -1;
+  height: 100%;
+  width: 50%;
+  position: relative;
+  transform: translateX(100%);
+}
+#about-me .decoration-block .wrapper, #about-me .decoration-block .wrapper .blob {
+  height: 45px;
+  aspect-ratio: 1/1;
+  background-color: var(--light-grey);
+  border-radius: 50%;
+  position: absolute;
+}
+#about-me .decoration-block .wrapper .blob {
+  background-color: var(--highlight-1);
+}
+#about-me .decoration-block .wrapper:first-child, #about-me .decoration-block .wrapper .blob:first-child {
+  top: 50%;
+  left: 50%;
+}
+@media screen and (min-width: 600px) {
+  #about-me .decoration-block {
+    display: block;
+  }
+}

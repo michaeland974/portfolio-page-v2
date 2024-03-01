@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" 
+        content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="var(--main)" />
+  <link href="bundled-css/reset.css" rel="stylesheet">
+  <link href="bundled-css/styles.css" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="favicon-32x32.png"/>
+  <script type="module" src="js/app.min.js" defer></script>
+  <title>Portfolio</title>
+</head>
+  <body>
+    <div id="onload-wrapper">
+      <svg viewBox="0 0 35.6 35.6">
+        <circle data-type="background" cx="17.8" cy="17.8" r="17.8"></circle>
+        <circle data-type="stroke" cx="17.8" cy="17.8" r="15.5"></circle>
+      </svg>  
+      <div id="icon-glasses"></div>
+    </div>
+
+    <header>
+      <h1>Web Developer</h1>
+
+      <div class="wrapper">
+        <nav>
+          <ul>
+            <li tabindex="0" role="button"
+                id="about-me-nav"
+                aria-expanded="false"
+                aria-controls="about-me">About me</li>
+            <li tabindex="0" role="button" 
+                id="projects-nav"
+                aria-expanded="false"
+                aria-controls="projects">Projects</li>
+            <li tabindex="0" role="button" 
+                id="contact-nav"
+                aria-expanded="false"
+                aria-controls="contact-me">Get in touch</li>
+          </ul>
+        </nav>
+
+        <label for="dark-mode-check" id="checkbox-wrapper">
+          <input type="checkbox" data-theme="dark" id="dark-mode-check">
+          <svg viewBox="0 0 35.6 35.6">
+            <circle data-type="background" cx="17.8" cy="17.8" r="17.8"></circle>
+            <circle data-type="stroke" cx="17.8" cy="17.8" r="15.5"></circle>
+          </svg>  
+          <div id="icon-overlay"></div>
+        </label>
+      </div>
+
+    </header>
+
+    <main>
+      <section class="view" id="about-me" aria-selected="false">
+        <div class="content">
+          <div class="group-1">
+            <h2>I'm Michael</h2>
+          </div>
+          <p>
+            A self-taught developer and <span>CSS Enthusiast</span>, specialized in front end coding and Wordpress.
+            I've worked as a restaurant cook for the past five years, and I'm looking to make a career transition onto a professional web or design team.
+          </p>
+        </div>
+
+        <div class="decoration-block" aria-hidden="true">
+          <div class="wrapper">
+            <div class="blob"></div>
+          </div>
+          <div class="wrapper">
+            <div class="blob" id="test"></div>
+          </div>
+          <div class="wrapper">
+            <div class="blob" id="test"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="view" id="projects" aria-selected="false">
+        <h2>Projects</h2>
+          <div id="slide-container">
+            <div class="card">
+              
+              <div class="opacity-wrapper">
+                <div class="content">
+                  <h3>National Park News</h3>
+                  <p>
+                    You can check out the news.
+                  </p>
+                  <p>
+                    The data is retrieved from the 
+                    <a class="backlink" target="_blank" href="https://www.nps.gov/subjects/developer/api-documentation.htm">NPS API</a>.
+                  </p>
+                </div>
+                <div class="links">
+                  <a class="github-site"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     href="https://github.com/michaeland974/nps-app">
+                     <img src="github-mark.png" alt="github-link">
+                  </a>
+                  <a class="live-site"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     href="https://nps-news.onrender.com/">
+                    <div class="icon"></div>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+            <div class="card">
+
+              <div class="opacity-wrapper">
+                <div class="content">
+                  <h3>Mixin Catalog</h3>
+                  <p>
+                    Create a collection of your favorite Sass Mixins
+                  </p>
+                </div>
+                <div class="links">
+                  <a class="github-site"
+                     class="single"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     href="https://github.com/michaeland974/style-catalog">
+                     <img src="github-mark.png" alt="github-link">
+                  </a>
+                </div>
+              </div>
+
+            </div>
+            <div class="card" data-active>
+
+              <div class="opacity-wrapper">
+                <div class="content">
+                  <h3>Synder Recordings</h3>
+                  <p>
+                    A responsive implementation from a design comp
+                  </p>
+                </div>
+                <div class="links">
+                  <a class="github-site"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     href="https://github.com/michaeland974/coding-challenge">
+                     <img src="github-mark.png" alt="github-link">
+                  </a>
+                  <a class="live-site"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     href="https://coding-challenge-live.onrender.com/">
+                    <div class="icon"></div>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+            <div class="card">
+              
+              <div class="opacity-wrapper">
+                <div class="content">
+                  <h3>One Page Widgets</h3>
+                  <p>
+                    Widgets all on one page
+                  </p>
+                </div>
+                <div class="links">
+                  <a class="github-site"
+                     target="_blank"
+                     href="https://github.com/michaeland974/junk-drawer-app">
+                     <img src="github-mark.png" alt="github-link">
+                  </a>
+                  <a class="live-site"
+                     target="_blank"
+                     href="https://junk-drawer.onrender.com/">
+                    <div class="icon"></div>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+            <div class="card">
+
+              <div class="opacity-wrapper">
+                <div class="content">
+                  <h3>Simplify for Youtube</h3>
+                  <p>
+                    A chrome extension to declutter the Youtube homepage.
+                  </p>
+                </div>
+                <div class="links">
+                  <a class="github-site"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     href="https://github.com/michaeland974/chrome-ext-youtube">
+                     <img src="github-mark.png" alt="github-link">
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="controls">
+            <button id="prev" data-slider="prev"><div class="icon"></div></button>
+            <button id="next" data-slider="next"><div class="icon"></div></button>
+          </div>
+      </section>
+
+      <section class="view" id="get-in-touch" aria-selected="false">
+        
+          <div class="content">
+            <a href="mailto:micanderson29@gmail.com">
+              Contact me 
+              <span>
+                <div class="icon"></div>
+              </span>
+            </a>
+            <p>just want to say hey!</p>
+          </div>
+          
+          <div class="decoration-block" aria-hidden="true">
+            <div class="wrapper">
+              <div class="blob"></div>
+            </div>
+            <div class="wrapper">
+              <div class="blob" id="test"></div>
+            </div>
+            <div class="wrapper">
+              <div class="blob" id="test"></div>
+            </div>
+          </div>
+
+      </section>
+    </main>
+
+  </body>
+</html>
