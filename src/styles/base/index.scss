@@ -36,11 +36,10 @@ body{
   background: global.$main;
   height: 100svh;
   width: 100vw;
+  transition: background-color global.$transition-timing;
+  
   overflow-x: hidden;
   overflow-y: hidden;
-
-  transition: background-color global.$transition-timing;
-
   animation: Scroll-Onload 1s ease-out forwards;
   animation-delay: map.get(global.$delays, "onload-visibility");
 

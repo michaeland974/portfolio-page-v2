@@ -82,21 +82,30 @@
       font-family: Serif-Light;
       color: global.$main;
       border-radius: 20px;
-      transition: width 0.8s ease;
+      transition: width 0.7s ease;
 
       .opacity-wrapper{
         opacity: 0;
-        display: flex;
+        visibility: hidden;
         height: 100%;
-        flex-direction: column-reverse;
-        justify-content: space-between;
-        padding: 1em;
         position: relative;
 
-        //Fix for link group positioning on transition
-        transition: opacity 0.1s cubic-bezier(.27,1.03,.85,.8);
+        // * Fix for link group positioning on transition * //
+        transition: opacity 1.3s cubic-bezier(.27,1.03,.85,.8);
 
         .content{
+          position: absolute;
+          left: 3%;  
+          bottom: 5%;
+
+          @media screen and (min-width: media.$tablet-width) {
+            left: 5%;
+          }
+
+          @media screen and (min-width: media.$desktop-width) {
+            left: 2.5%;
+          }
+
           h3{
             font-size: global.$fs-text;
             line-height: 1em;
@@ -112,7 +121,7 @@
         .links{
           position: absolute;
           top: 5%;
-          right: 5%; 
+          right: 2.5%; 
           display: flex;
           gap: 1em;
           border: 1px solid global.$main;
@@ -154,6 +163,7 @@
         
         .opacity-wrapper{
           opacity: 1;
+          visibility: visible;
         }
 
         @media screen and (min-width: media.$tablet-width) {
